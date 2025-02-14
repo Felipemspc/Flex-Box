@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Flex Boxes</title>
+</head>
+
+<body id="meuBody">
+    <div id="titulo">
+        <h1>Flex Box</h1>
+        <p id="guide">Guide</p>
+    </div>
+    <div id="corpoCaixa">
+        <div id="caixa">
+            
+        </div>
+    </div>
+
+    <div id="corpoButtons">
+        <div id="buttonsJustify">
+            <h2>Justify Content</h2>
+            <button id="justifyStart" onclick="justifyStart()">Flex-Start</button>
+            <button id="justifyCenter" onclick="justifyCenter()">center</button>
+            <button id="justfyEnd" onclick="justifyEnd()">Flex-End</button>
+
+        </div>
+        <div id="buttonsAlign">
+            <h2>Align Items</h2>
+            <button id="alignStart" onclick="alignStart()" >Flex-Start</button>
+            <button id="alignCenter" onclick="alignCenter()">center</button>
+            <button id="alignEnd" onclick="alignEnd()">Flex-End</button>
+
+        </div>
+    </div>
+</body>
+
+
+<script>
+    function justifyStart() {
+        let box = document.getElementById('corpoCaixa')
+        let atualJustify = document.getElementById('corpoCaixa').justifyContent
+        if (atualJustify === 'flex-start') {
+            alert('Opção já selecionada!')
+            console.log('A opção:', atualJustify)
+        } else {
+
+            box.style.justifyContent = 'flex-start'
+        }
+
+    }
+
+    function justifyCenter() {
+        let box = document.getElementById('corpoCaixa')
+        let atualCenter = document.getElementById('corpoCaixa').justifyContent
+        if (atualCenter === 'center') {
+            alert('Opção já selecionada!')
+            console.log('A opção:', atualCenter)
+        } else {
+
+            box.style.justifyContent = 'center'
+        }
+
+    }
+    function justifyEnd() {
+        let box = document.getElementById('corpoCaixa')
+        let atualEnd = document.getElementById('corpoCaixa').justifyContent
+        if (atualEnd === 'end') {
+            alert('Opção já selecionada!')
+            console.log('A opção:', atualEnd)
+        } else {
+            box.style.justifyContent = ''
+            box.style.justifyContent = 'flex-end'
+        }
+
+    }
+
+    function alignStart() {
+        let box = document.getElementById('corpoCaixa')
+        let atualStart = window.getComputedStyle(box).alignItems
+        if (atualStart === 'flex-start') {
+            alert('Opção já selecionada!')
+            console.log('A opção:', atualStart)
+        } else {
+
+            box.style.alignItems = 'flex-start'
+        }
+
+    }
+    function alignCenter() {
+        let box = document.getElementById('corpoCaixa')
+        let atualCenter = window.getComputedStyle(box).alignItems
+        if (atualCenter === 'center') {
+            alert('Opção já selecionada!')
+            console.log('A opção:', atualCenter)
+        } else {
+
+            box.style.alignItems = 'center'
+        }
+
+    }
+    function alignEnd() {
+        let box = document.getElementById('corpoCaixa')
+        let atualEnd = window.getComputedStyle(box).alignItems
+        if (atualEnd === 'flex-end') {
+            alert('Opção já selecionada!')
+            console.log('A opção:', atualEnd)
+        } else {
+
+            box.style.alignItems = 'flex-end'
+        }
+
+    }
+
+</script>
+
+</html>
