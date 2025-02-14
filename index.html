@@ -41,7 +41,7 @@
 <script>
     function justifyStart() {
         let box = document.getElementById('corpoCaixa')
-        let atualJustify = window.getComputedStyle('caixa').justifyContent
+        let atualJustify = window.getComputedStyle(box).justifyContent
         if (atualJustify === 'flex-start') {
             alert('Opção já selecionada!')
             console.log('A opção:', atualJustify)
@@ -54,7 +54,7 @@
 
     function justifyCenter() {
         let box = document.getElementById('corpoCaixa')
-        let atualCenter = window.getComputedStyle('caixa').justifyContent
+        let atualCenter = window.getComputedStyle(box).justifyContent
         if (atualCenter === 'center') {
             alert('Opção já selecionada!')
             console.log('A opção:', atualCenter)
@@ -66,7 +66,7 @@
     }
     function justifyEnd() {
         let box = document.getElementById('corpoCaixa')
-        let atualEnd = window.getComputedStyle('caixa').justifyContent
+        let atualEnd = window.getComputedStyle(box).justifyContent
         if (atualEnd === 'end') {
             alert('Opção já selecionada!')
             console.log('A opção:', atualEnd)
